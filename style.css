@@ -311,6 +311,25 @@ h2{
     color: #C1E1C1;
     transition: 1s; 
 }
+.pres-btn { 
+    display: inline-block; 
+    text-decoration: none; 
+    color: white; 
+    border: 1px solid white;
+    padding: 12px 34px; 
+    font-size: 13px; 
+    background: transparent; 
+    position: relative; 
+    cursor: pointer;
+    /* text-align: right;  */
+}
+
+.pres-btn:hover {
+    border: 1px solid white; 
+    background: white; 
+    color: #C1E1C1;
+    transition: 1s; 
+}
 
 .project-col h4 { 
     font-weight: 400;
@@ -333,6 +352,11 @@ h2{
     position: absolute;
     bottom: 20px;
     right: 20px;
+}
+.project-col .pres-btn { 
+    position: absolute;
+    bottom: 20px;
+    left: 10px; 
 }
 @media(max-width: 700px) { 
 
