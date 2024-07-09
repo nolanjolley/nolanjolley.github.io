@@ -12,6 +12,7 @@
     background-position: center;
     background-size: cover;
     position: relative; 
+    
 }
 
 nav{ 
@@ -268,19 +269,20 @@ h2{
 .project-col { 
     flex-basis: 47%; 
     /* margin-bottom: 20px; */
-    border-radius: 10px; 
+    /* border-radius: 10px;  */
     position: relative;
     overflow: hidden; 
-    /* justify-content: space-between;
+    justify-content: space-between; 
     flex-direction: column;
 
-    display: flex; */
+    display: flex;
 }
 
 
 .project-col img { 
     width: 100%;
-    padding-bottom: 12px;
+    /* padding-bottom: 12px; */
+    align-self: center;
 }
 
 .project-col h1{ 
@@ -292,7 +294,14 @@ h2{
     text-align: left;
 }
 
-.proj-btn { 
+.proj-col .hero-btn:hover {
+    border: 1px solid white; 
+    background: white; 
+    color: #C1E1C1;
+    transition: 1s; 
+}
+
+/* .proj-btn { 
     display: inline-block; 
     text-decoration: none; 
     color: white; 
@@ -302,16 +311,17 @@ h2{
     background: transparent; 
     position: relative; 
     cursor: pointer;
-    /* text-align: right;  */
-}
+    /* text-align: right;  
 
-.proj-btn:hover {
+} */
+
+/* .proj-btn:hover {
     border: 1px solid white; 
     background: white; 
     color: #C1E1C1;
     transition: 1s; 
-}
-.pres-btn { 
+} */
+/* .pres-btn { 
     display: inline-block; 
     text-decoration: none; 
     color: white; 
@@ -319,17 +329,17 @@ h2{
     padding: 12px 34px; 
     font-size: 13px; 
     background: transparent; 
-    position: relative; 
+    position: absolute; 
     cursor: pointer;
-    /* text-align: right;  */
-}
+    /* text-align: right;  
+} */
 
-.pres-btn:hover {
+/* .pres-btn:hover {
     border: 1px solid white; 
     background: white; 
     color: #C1E1C1;
     transition: 1s; 
-}
+} */
 
 .project-col h4 { 
     font-weight: 400;
@@ -357,6 +367,10 @@ h2{
     position: absolute;
     bottom: 20px;
     left: 10px; 
+}
+
+.project-col a {
+    margin-top: 10px;
 }
 
 @media(max-width: 700px) { 
