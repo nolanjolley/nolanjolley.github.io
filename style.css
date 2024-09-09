@@ -1,7 +1,7 @@
 *{ 
     margin: 0; 
     padding: 0; 
-    font-family: 'Mulish', sans-serif;
+    font-family: 'Rubik';
 }
 
 .header1 { 
@@ -100,8 +100,9 @@ nav{
 
 .hero-btn:hover {
     
-    border: 1px solid #C1E1C1; 
-    background: #C1E1C1; 
+    border: 1px solid white; 
+    background: white; 
+    color: #C1E1C1; 
     transition: 1s; 
 
 }
@@ -255,6 +256,20 @@ h2{
 
     flex-basis: 31%;
     background: #C1E1C1;
+    border-radius: 10px; 
+    margin-bottom: 5%; 
+    padding: 20px 20px; 
+    box-sizing: border-box;
+    transition: 0.5s; 
+}
+
+.row3 { 
+    margin-top: 5%;
+    display: flex; 
+    justify-content: space-between;
+
+    flex-basis: 31%;
+    background: #d9e3f2;
     border-radius: 10px; 
     margin-bottom: 5%; 
     padding: 20px 20px; 
