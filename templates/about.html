@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+
+{% block title %}About Nolan Jolley{% endblock %}
+
+{% block maincontent %}
+        <div class="about">
+            <h3>About</h3>
+            <p>I'm a software engineer and web developer passionate about creating solutions
+                that help people make the world a better place.
+                At the moment, I'm pursuing a degree in Computer Science Engineering from Michigan State University,
+                with an additional major in Korean language and culture.
+                Building on prior learnings in linguistics and cognitive science, I'd like to 
+                work on projects
+                that will help us all understand eachother a little bit better.
+            </p>
+            <p>
+                Lets <a href="/contact">get in touch</a>!
+            </p>
+        </div>
+        <div class="frog-container">
+            <img id="frog" src="static/images/Name-the-frog.png" alt="Pixel Frog">
+        </div>
+
+
+  <script>
+    const frog = document.getElementById('frog');
+    const container = document.querySelector('.frog-container');
+
+    let state = 'waiting';
+    let direction = 1;
+    let position = 0;
+    let jumpStrength = 0;
+    let jumpStart = 0;
+    let jumpDuration = 0;
+    let waitTimeout = null;
+
+    function startJump() {
+      state = 'jumping';
+      direction = Math.random() > 0.5 ? 1 : -1;
+      frog.style.transform = `scaleX(${direction})`;
+      jumpStrength = 6 + Math.random() * 4;
+      jumpDuration = 40 + Math.random() * 20;
+      jumpStart = 0;
+    }
+
+    function waitAndJump() {
+      if (waitTimeout) clearTimeout(waitTimeout);
+      state = 'waiting';
+      waitTimeout = setTimeout(startJump, 600 + Math.random() * 1200);
+    }
+
+    function animate() {
+      if (state === 'jumping') {
+        jumpStart++;
+
+        // Horizontal movement
+        let maxX = container.clientWidth - frog.clientWidth;
+        position += direction * 3;
+        if (position < 0) {
+          position = 0;
+          direction = 1;
+          frog.style.transform = `scaleX(1)`;
+        }
+        if (position > maxX) {
+          position = maxX;
+          direction = -1;
+          frog.style.transform = `scaleX(-1)`;
+        }
+        frog.style.left = position + 'px';
+
+        // Vertical parabolic movement
+        let t = jumpStart / jumpDuration;
+        let height = -Math.pow((t - 0.5) * 2, 2) + 1;
+        frog.style.bottom = (10 + height * jumpStrength * 10) + 'px';
+
+        if (jumpStart >= jumpDuration) {
+          frog.style.bottom = '10px';
+          waitAndJump();
+        }
+      }
+      requestAnimationFrame(animate);
+    }
+
+    // Start after image is ready
+    frog.onload = () => {
+      position = 0;
+      frog.style.left = position + 'px';
+      frog.style.bottom = '10px';
+      waitAndJump();
+      animate();
+    };
+
+    if (frog.complete) {
+      frog.onload();
+    }
+  </script>
+
+{% endblock %}
