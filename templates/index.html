@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nolan Jolley - About</title>
+  <title>Nolan Jolley - Experience</title>
   <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,35 +21,58 @@
       <nav>
         <div class="nav-links" id="navLinks">
           <ul>
-            <li><a href="about.html"> About </a></li>
-            <li><a href="index.html">Experience</a></li>
-            <li><a href="projects.html"> Projects </a></li>
-            <li><a href="contact.html"> Contact </a></li>
-            <li><a href="static/images/nolanjolley2025-12.pdf" target=blank_> Resume </a></li>
+                        <li><a href="about.html"> About </a></li>
+                        <li><a href="index.html">Experience</a></li>
+                        <li><a href="projects.html"> Projects </a></li>
+                        <li><a href="contact.html"> Contact </a></li>
+                        <li><a href="static/images/nolanjolley2025-12.pdf" target=blank_> Resume </a></li>
           </ul>
         </div>
       </nav>
     </div>
   </header>
   <main>
-    <div class="about">
-      <h3>About</h3>
-      <p>I'm a software engineer and web developer passionate about creating solutions
-        that help people make the world a better place.
-        At the moment, I'm pursuing a degree in Computer Science Engineering from Michigan State University,
-        with an additional major in Korean language and culture.
-        Building on prior learnings in linguistics and cognitive science, I'd like to
-        work on projects
-        that will help us all understand eachother a little bit better.
-      </p>
-      <p>
-        Lets <a href="/contact">get in touch</a>!
-      </p>
-    </div>
-    <div class="frog-container">
-      <img id="frog" src="static/images/Name-the-frog.png" alt="Pixel Frog">
+    <div class="experience-section">
+      <h3>Experience</h3>
+
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">Full Stack Software Engineer Intern</span>
+          <span class="job-dates">May - August 2025</span>
+        </div>
+        <div class="job-company">GE Aerospace</div>
+        <div class="job-description">
+          <p>Worked with a global developer team to design, develop, and deploy a new user engagement tracking
+            functionality for an externally facing web application built with Vue.js, TypeScript, and Java
+            SpringBoot, providing valuable utilization analytics and insight for application stakeholders
+          </p>
+          <p>
+            Joined intern creative team and led sub-committee focused on gathering feedback for and improving
+            the intern onboarding experience
+          </p>
+        </div>
+      </div>
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">Information Technology Intern</span>
+          <span class="job-dates">May 2024 - Present</span>
+        </div>
+        <div class="job-company">Michigan Retailers Association and Insurance Company</div>
+        <div class="job-description">
+          <p>
+            Maintained computer, phone, and security systems as well as interpersonal relationships facilitating a
+            smoother working experience between Michigan Retailers Association and Retailers Insurance Company
+          </p>
+          <p>
+            Utilized HTML and CSS to maintain, review, and update company websites
+          </p>
+        </div>
+      </div>
     </div>
 
+    <div class="frog-container">
+      <img id="frog" src="{{ url_for('static', filename='images/Name-the-frog.png') }}" alt="Pixel Frog">
+    </div>
 
     <script>
       const frog = document.getElementById('frog');

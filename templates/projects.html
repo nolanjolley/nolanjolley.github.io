@@ -1,9 +1,38 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
 
-{% block title %}Projects — Nolan Jolley{% endblock %}
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}Nolan Jolley{% endblock %}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./static/css/style.css" />
+</head>
 
-{% block maincontent %}
-<!-- <div class="about">
+<body>
+    <header>
+        <div class="header-row">
+            <h1>Nolan Jolley</h1>
+            <nav>
+                <div class="nav-links" id="navLinks">
+                    <ul>
+                        <li><a href="about.html"> About </a></li>
+                        <li><a href="index.html">Experience</a></li>
+                        <li><a href="projects.html"> Projects </a></li>
+                        <li><a href="contact.html"> Contact </a></li>
+                        <li><a href="static/images/nolanjolley2025-12.pdf" target=blank_> Resume </a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <!-- <div class="about">
             <h3>Projects</h3>
             <p>I'm in the middle of migrating from an old site, so this is a work in progress.</p>
             <p>Please take a look at my <a href="https://github.com/nolanjolley" target="blank">GitHub</a> for bummy sample projects.</p>
@@ -13,145 +42,164 @@
         </div>
     <div class="experience-section"> -->
 
-<div class="experience-section">
-    <h3>Projects</h3>
+        <div class="experience-section">
+            <h3>Projects</h3>
 
-    <div class="job">
-        <div class="job-header">
-            <span class="job-title">My VR Language Tutor</span>
-            <span class="job-dates">August - December 2025</span>
+            <div class="job">
+                <div class="job-header">
+                    <span class="job-title">My VR Language Tutor</span>
+                    <span class="job-dates">August - December 2025</span>
+                </div>
+                <div class="job-company">Michigan State University, Launch by NTT Data</div>
+                <div class="job-description">
+                    <p>
+                        Worked on a team of 6 to build an AI-powered VR language learning application with Unity, C#,
+                        and FastAPI
+                    </p>
+                    <p>
+                        Utilized Microsoft Azure Cognitive Services for real-time speech recognition and feedback,
+                        enhancing
+                        user pronunciation and conversational skills
+                    </p>
+                    <p>
+                        Includes immersive VR environments, interactive dialogues with AI-driven characters, sign
+                        reading, and
+                        object identification to facilitate contextual learning
+                    </p>
+                    <a href="https://capstone.cse.msu.edu/2025-08/projects/launch/" target="_blank"><b>Read
+                            more!</b></a>
+                </div>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <span class="job-title">Social Media App</span>
+                    <span class="job-dates">Summer 2024</span>
+
+                </div>
+                <div class="job-company">Personal Project</div>
+                <div class="job-description">
+                    <p>
+                        Pursued personal interest in full stack web development to successfully locally deploy and
+                        develop a basic social media site built utilizing HTML, CSS, and JavaScript
+                    </p>
+                    <p>
+                        Securely implemented with Google Firebase data base system and authentication services
+                    </p>
+
+                    <a href="https://drive.google.com/file/d/1220vEfBNacxtOt5cvhkiYfv4QR_u9eX0/view?usp=drive_link"
+                        target="_blank"><b>Read more!</b></a>
+                </div>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <span class="job-title">Fight Song Guitar Hero</span>
+                    <span class="job-dates">Spring 2024</span>
+                </div>
+                <div class="job-company">Michigan State University</div>
+                <div class="job-description">
+                    <p>
+                        Implemented C++ Fight Song Guitar Hero and acted as team leader
+                    </p>
+                    <p>
+                        Achieved a near perfect score by creating and maintaining a local library composed of 21 refined
+                        classes and implementing intensive unit testing while adhering to positive development practices
+                    </p>
+                    <p>
+                        Utilized team management softwares to manage internal software and personal issues
+                    </p>
+                </div>
+            </div>
+
         </div>
-        <div class="job-company">Michigan State University, Launch by NTT Data</div>
-        <div class="job-description">
-            <p>
-                Worked on a team of 6 to build an AI-powered VR language learning application with Unity, C#, and FastAPI
-            </p>
-            <p>
-                Utilized Microsoft Azure Cognitive Services for real-time speech recognition and feedback, enhancing
-                user pronunciation and conversational skills
-            </p>
-            <p>
-                Includes immersive VR environments, interactive dialogues with AI-driven characters, sign reading, and
-                object identification to facilitate contextual learning
-            </p>
-            <a href="https://capstone.cse.msu.edu/2025-08/projects/launch/" target="_blank"><b>Read more!</b></a>
+
+        <div class="frog-container">
+            <img id="frog" src="{{ url_for('static', filename='images/Name-the-frog.png') }}" alt="Pixel Frog">
         </div>
-    </div>
 
-    <div class="job">
-        <div class="job-header">
-            <span class="job-title">Social Media App</span>
-            <span class="job-dates">Summer 2024</span>
+        <script>
+            const frog = document.getElementById('frog');
+            const container = document.querySelector('.frog-container');
 
-        </div>
-        <div class="job-company">Personal Project</div>
-        <div class="job-description">
-            <p>
-                Pursued personal interest in full stack web development to successfully locally deploy and develop a basic social media site built utilizing HTML, CSS, and JavaScript
-            </p>
-            <p>
-                Securely implemented with Google Firebase data base system and authentication services
-            </p>
+            let state = 'waiting';
+            let direction = 1;
+            let position = 0;
+            let jumpStrength = 0;
+            let jumpStart = 0;
+            let jumpDuration = 0;
+            let waitTimeout = null;
 
-            <a href="https://drive.google.com/file/d/1220vEfBNacxtOt5cvhkiYfv4QR_u9eX0/view?usp=drive_link" target="_blank"><b>Read more!</b></a>
-        </div>
-    </div>
+            function startJump() {
+                state = 'jumping';
+                direction = Math.random() > 0.5 ? 1 : -1;
+                frog.style.transform = `scaleX(${direction})`;
+                jumpStrength = 6 + Math.random() * 4;
+                jumpDuration = 40 + Math.random() * 20;
+                jumpStart = 0;
+            }
 
-        <div class="job">
-        <div class="job-header">
-            <span class="job-title">Fight Song Guitar Hero</span>
-            <span class="job-dates">Spring 2024</span>
-        </div>
-        <div class="job-company">Michigan State University</div>
-        <div class="job-description">
-            <p>
-                Implemented C++ Fight Song Guitar Hero and acted as team leader
-            </p>
-            <p>
-                Achieved a near perfect score by creating and maintaining a local library composed of 21 refined classes and implementing intensive unit testing while adhering to positive development practices 
-            </p>
-            <p>
-                Utilized team management softwares to manage internal software and personal issues 
-            </p>
-        </div>
-    </div>
+            function waitAndJump() {
+                if (waitTimeout) clearTimeout(waitTimeout);
+                state = 'waiting';
+                waitTimeout = setTimeout(startJump, 600 + Math.random() * 1200);
+            }
 
-</div>
+            function animate() {
+                if (state === 'jumping') {
+                    jumpStart++;
 
-<div class="frog-container">
-    <img id="frog" src="{{ url_for('static', filename='images/Name-the-frog.png') }}" alt="Pixel Frog">
-</div>
+                    // Horizontal movement
+                    let maxX = container.clientWidth - frog.clientWidth;
+                    position += direction * 3;
+                    if (position < 0) {
+                        position = 0;
+                        direction = 1;
+                        frog.style.transform = `scaleX(1)`;
+                    }
+                    if (position > maxX) {
+                        position = maxX;
+                        direction = -1;
+                        frog.style.transform = `scaleX(-1)`;
+                    }
+                    frog.style.left = position + 'px';
 
-<script>
-    const frog = document.getElementById('frog');
-    const container = document.querySelector('.frog-container');
+                    // Vertical parabolic movement
+                    let t = jumpStart / jumpDuration;
+                    let height = -Math.pow((t - 0.5) * 2, 2) + 1;
+                    frog.style.bottom = (10 + height * jumpStrength * 10) + 'px';
 
-    let state = 'waiting';
-    let direction = 1;
-    let position = 0;
-    let jumpStrength = 0;
-    let jumpStart = 0;
-    let jumpDuration = 0;
-    let waitTimeout = null;
+                    if (jumpStart >= jumpDuration) {
+                        frog.style.bottom = '10px';
+                        waitAndJump();
+                    }
+                }
+                requestAnimationFrame(animate);
+            }
 
-    function startJump() {
-        state = 'jumping';
-        direction = Math.random() > 0.5 ? 1 : -1;
-        frog.style.transform = `scaleX(${direction})`;
-        jumpStrength = 6 + Math.random() * 4;
-        jumpDuration = 40 + Math.random() * 20;
-        jumpStart = 0;
-    }
-
-    function waitAndJump() {
-        if (waitTimeout) clearTimeout(waitTimeout);
-        state = 'waiting';
-        waitTimeout = setTimeout(startJump, 600 + Math.random() * 1200);
-    }
-
-    function animate() {
-        if (state === 'jumping') {
-            jumpStart++;
-
-            // Horizontal movement
-            let maxX = container.clientWidth - frog.clientWidth;
-            position += direction * 3;
-            if (position < 0) {
+            // Start after image is ready
+            frog.onload = () => {
                 position = 0;
-                direction = 1;
-                frog.style.transform = `scaleX(1)`;
-            }
-            if (position > maxX) {
-                position = maxX;
-                direction = -1;
-                frog.style.transform = `scaleX(-1)`;
-            }
-            frog.style.left = position + 'px';
-
-            // Vertical parabolic movement
-            let t = jumpStart / jumpDuration;
-            let height = -Math.pow((t - 0.5) * 2, 2) + 1;
-            frog.style.bottom = (10 + height * jumpStrength * 10) + 'px';
-
-            if (jumpStart >= jumpDuration) {
+                frog.style.left = position + 'px';
                 frog.style.bottom = '10px';
                 waitAndJump();
+                animate();
+            };
+
+            if (frog.complete) {
+                frog.onload();
             }
-        }
-        requestAnimationFrame(animate);
-    }
+        </script>
+    </main>
+    <footer>
+        <div class="footer-row">
+            <div class="icons">
+                <i class="fa fa-github" onclick="window.location.href = 'https://github.com/nolanjolley';"></i>
+                <i class="fa fa-linkedin-square"
+                    onclick="window.location.href = 'https://www.linkedin.com/in/nolan-jolley-66517a282/';"></i>
+            </div>
+        </div>
+    </footer>
+</body>
 
-    // Start after image is ready
-    frog.onload = () => {
-        position = 0;
-        frog.style.left = position + 'px';
-        frog.style.bottom = '10px';
-        waitAndJump();
-        animate();
-    };
-
-    if (frog.complete) {
-        frog.onload();
-    }
-</script>
-{% endblock %}
+</html>

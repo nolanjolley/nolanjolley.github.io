@@ -1,8 +1,36 @@
-{% extends "base.html" %}
-{% block title %}Contact — Nolan Jolley{% endblock %}
-
-{% block maincontent %}
-<div class="about">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nolan Jolley - Contact</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./static/css/style.css" />
+</head>
+<body>
+    <header>
+        <div class="header-row">
+            <h1>Nolan Jolley</h1>
+            <nav>
+                <div class="nav-links" id="navLinks">
+                    <ul>
+                        <li><a href="about.html"> About </a></li>
+                        <li><a href="index.html">Experience</a></li>
+                        <li><a href="projects.html"> Projects </a></li>
+                        <li><a href="contact.html"> Contact </a></li>
+                        <li><a href="static/images/nolanjolley2025-12.pdf" target=blank_> Resume </a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="about">
     <h3>Contact</h3>
     <p>Email me at <a href="mailto:jolleyno@msu.edu">jolleyno@msu.edu</a> or connect with me on <a href="www.linkedin.com/in/nolan-jolley">linkedin</a>!</p>
 </div>
@@ -82,4 +110,17 @@
         frog.onload();
     }
 </script>
-{% endblock %}
+    </main>
+    <footer>
+        <div class="footer-row">
+            <div class="icons">
+                <i class="fa fa-github" onclick="window.location.href = 'https://github.com/nolanjolley';"></i>
+                <i class="fa fa-linkedin-square"
+                    onclick="window.location.href = 'https://www.linkedin.com/in/nolan-jolley-66517a282/';"></i>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+
